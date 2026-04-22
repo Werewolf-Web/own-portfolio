@@ -1,39 +1,45 @@
 import React from 'react'
-import RoundButton from '../../common-components/RoundButton'
 
 const FooterPage = () => {
   return (
     <>
-      <div className='bg-[#272727] h-137.5 rounded-t-3xl pt-8'>
-        {/* First connect slice */}
-        <div className=' mx-17 flex justify-between'>
-          <div>
-            <h1 className="font-abhaya text-5xl text-white">
-              Lets Connect there
-            </h1>
-          </div>
-          <div>
-            <button className='h-12 w-30.5 bg-[#FD853A] text-white rounded-4xl font-medium '>Hire Me </button>
-          </div>
+      <div className='bg-[#272727] min-h-[550px] rounded-t-3xl pt-8'>
+
+        {/* Top Section */}
+        <div className='mx-[30px] flex flex-col md:flex-row justify-between items-center gap-4'>
+          <h1 className="font-abhaya text-3xl md:text-5xl text-white text-center md:text-left">
+            Lets Connect there
+          </h1>
+
+          <button className='h-12 px-6 bg-[#FD853A] text-white rounded-full font-medium'>
+            Hire Me
+          </button>
         </div>
-        <hr className='mx-17 mt-6.25 text-[#475467]' />
-        <div className=" mt-10 mx-[30px] mb-10 flex gap-6 p-6">
-          {/* Left Section */}
-          <div className=" p-4 w-[300px] text-white">
+
+        <hr className='mx-[30px] mt-6 border-[#475467]' />
+
+        {/* Middle Section */}
+        <div className="mt-10 mx-[30px] mb-10 flex flex-col md:flex-row flex-wrap gap-[60px] p-4 ">
+
+          {/* Left */}
+          <div className="p-4 text-white flex-1 min-w-[250px]">
             <ul className="space-y-3">
               <li>Image</li>
-              <li className="text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              <li className="text-sm font-medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
               </li>
-              <div className='flex gap-2'>
-                <li>Youtube</li>
-                <li>Instagram</li>
-                <li>LinkedIn</li>
-              </div>
+
+              {/* FIXED */}
+              <li className='flex gap-3'>
+                <span>Youtube</span>
+                <span>Instagram</span>
+                <span>LinkedIn</span>
+              </li>
             </ul>
           </div>
+
           {/* Navigation */}
-          <div className=" p-4 w-48 text-white">
+          <div className="p-4 text-white min-w-[150px]">
             <span className="text-orange-400 font-bold block mb-4">
               Navigation
             </span>
@@ -45,8 +51,9 @@ const FooterPage = () => {
               <li>Project</li>
             </ul>
           </div>
+
           {/* Contact */}
-          <div className=" p-4 w-48 text-white">
+          <div className="p-4 text-white min-w-[150px]">
             <span className="text-orange-400 font-bold block mb-4">
               Contact
             </span>
@@ -56,30 +63,40 @@ const FooterPage = () => {
               <li>fawziuiux.com</li>
             </ul>
           </div>
+
           {/* Newsletter */}
-          <div className=" p-4 w-[250px] text-orange-400">
+          <div className="p-4 text-orange-400 flex-1 min-w-[250px]">
             <span className="block mb-3 font-semibold">
               Get the latest information
             </span>
-            <div className="flex rounded-4xl">
+
+            <div className="flex">
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full p-2 text-white bg-yellow-100 rounded-tl-2xl rounded-bl-2xl"
+                className="w-75% p-2 text-black bg-yellow-100 rounded-l-2xl"
               />
-              <button className="bg-black px-3 rounded-tr-2xl rounded-br-2xl">→</button>
+              <button className="bg-black px-4 text-white rounded-r-2xl">
+                →
+              </button>
             </div>
           </div>
+
         </div>
-        <hr className='mx-17 mt-6.25 text-[#475467]' />
-        <div className='  mt-10 mx-17  mb-3 flex justify-between'>
-          <div >
-            <span className='text-[#FFFFFF]'>Copyright© 2023 Fawziuiux. All Rights Reserved.</span>
-          </div>
-          <div>
-            <span className='text-[#FFFFFF] font-medium'>User Terms & Conditions | Privacy Policy</span>
-          </div>
+
+        <hr className='mx-[30px] mt-6 border-[#475467]' />
+
+        {/* Bottom */}
+        <div className='mt-6 mx-[30px] mb-3 flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left'>
+          <span className='text-white text-sm'>
+            Copyright© 2023 Fawziuiux. All Rights Reserved.
+          </span>
+
+          <span className='text-white font-medium text-sm'>
+            User Terms & Conditions | Privacy Policy
+          </span>
         </div>
+
       </div>
     </>
   )
