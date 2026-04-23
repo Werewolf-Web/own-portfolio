@@ -1,9 +1,99 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+    const [active, setActive] = useState('Home')
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    const navItems = ['Home', 'About', 'Service', 'Resume', 'Project', 'Contact']
+
     return (
         <>
-            <h1>NAvbar</h1>
+            {/* Desktop Navbar */}
+            <div className='hidden md:flex bg-black h-[65px] mx-6 lg:mx-[190px] mt-[20px] rounded-[45px] items-center px-4 lg:px-6'>
+                <ul className='text-white text-[14px] lg:text-[16px] font-[600] flex items-center gap-4 lg:gap-10 w-full justify-center'>
+                    {['Home', 'About', 'Service'].map((item) => (
+                        <li key={item} className='shrink-0'>
+                            <button
+                                onClick={() => setActive(item)}
+                                className={`px-4 lg:px-5 py-2 rounded-full font-medium transition whitespace-nowrap ${
+                                    active === item
+                                        ? 'bg-orange-400 text-white'
+                                        : 'text-white hover:text-orange-400'
+                                }`}
+                            >
+                                {item}
+                            </button>
+                        </li>
+                    ))}
+
+                    {/* Logo */}
+                    <li className='flex items-center gap-2 shrink-0'>
+                        <div className='bg-orange-400 w-9 h-9 lg:w-10 lg:h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0'>
+                            SC
+                        </div>
+                        <span className='text-white font-semibold text-base lg:text-lg tracking-wide whitespace-nowrap'>
+                            SUJAL CRAFT
+                        </span>
+                    </li>
+
+                    {['Resume', 'Project', 'Contact'].map((item) => (
+                        <li key={item} className='shrink-0'>
+                            <button
+                                onClick={() => setActive(item)}
+                                className={`px-4 lg:px-5 py-2 rounded-full font-medium transition whitespace-nowrap ${
+                                    active === item
+                                        ? 'bg-orange-400 text-white'
+                                        : 'text-white hover:text-orange-400'
+                                }`}
+                            >
+                                {item}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            {/* Mobile Navbar */}
+            <div className='md:hidden bg-black mx-4 mt-4 rounded-[30px] px-5 py-3'>
+                <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2'>
+                        <div className='bg-orange-400 w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0'>
+                            SC
+                        </div>
+                        <span className='text-white font-semibold text-base tracking-wide whitespace-nowrap'>
+                            SUJAL CRAFT
+                        </span>
+                    </div>
+
+                    <button
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        className='text-white flex flex-col gap-1.5 ml-4'
+                    >
+                        <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                        <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}></span>
+                        <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                    </button>
+                </div>
+
+                {menuOpen && (
+                    <ul className='mt-4 flex flex-col gap-2 pb-3'>
+                        {navItems.map((item) => (
+                            <li key={item}>
+                                <button
+                                    onClick={() => { setActive(item); setMenuOpen(false) }}
+                                    className={`w-full text-left px-4 py-2 rounded-full font-medium transition ${
+                                        active === item
+                                            ? 'bg-orange-400 text-white'
+                                            : 'text-white hover:text-orange-400'
+                                    }`}
+                                >
+                                    {item}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
         </>
     )
 }

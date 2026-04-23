@@ -6,8 +6,8 @@ const FooterPage = () => {
       <div className='bg-[#272727] min-h-[550px] rounded-t-3xl pt-8'>
 
         {/* Top Section */}
-        <div className='mx-[30px] flex flex-col md:flex-row justify-between items-center gap-4'>
-          <h1 className="font-abhaya text-3xl md:text-5xl text-white text-center md:text-left">
+        <div className='mx-4 sm:mx-[30px] flex flex-col sm:flex-row justify-between items-center gap-4'>
+          <h1 className="font-abhaya text-3xl sm:text-4xl md:text-5xl text-white text-center sm:text-left">
             Lets Connect there
           </h1>
 
@@ -16,20 +16,18 @@ const FooterPage = () => {
           </button>
         </div>
 
-        <hr className='mx-[30px] mt-6 border-[#475467]' />
+        <hr className='mx-4 sm:mx-[30px] mt-6 border-[#475467]' />
 
         {/* Middle Section */}
-        <div className="mt-10 mx-[30px] mb-10 flex flex-col md:flex-row flex-wrap gap-[60px] p-4 ">
+        <div className="mt-10 mx-4 sm:mx-[30px] mb-10 flex flex-col sm:flex-row flex-wrap gap-[60px] p-4">
 
           {/* Left */}
-          <div className="p-4 text-white flex-1 min-w-[250px]">
+          <div className="p-4 text-white flex-1 min-w-[200px] sm:min-w-[250px]">
             <ul className="space-y-3">
               <li>Image</li>
               <li className="text-sm font-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
               </li>
-
-              {/* FIXED */}
               <li className='flex gap-3'>
                 <span>Youtube</span>
                 <span>Instagram</span>
@@ -39,7 +37,7 @@ const FooterPage = () => {
           </div>
 
           {/* Navigation */}
-          <div className="p-4 text-white min-w-[150px]">
+          <div className="p-4 text-white min-w-[120px] sm:min-w-[150px]">
             <span className="text-orange-400 font-bold block mb-4">
               Navigation
             </span>
@@ -53,7 +51,7 @@ const FooterPage = () => {
           </div>
 
           {/* Contact */}
-          <div className="p-4 text-white min-w-[150px]">
+          <div className="p-4 text-white min-w-[120px] sm:min-w-[150px]">
             <span className="text-orange-400 font-bold block mb-4">
               Contact
             </span>
@@ -65,7 +63,7 @@ const FooterPage = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="p-4 text-orange-400 flex-1 min-w-[250px]">
+          <div className="p-4 text-orange-400 flex-1 min-w-[200px] sm:min-w-[250px]">
             <span className="block mb-3 font-semibold">
               Get the latest information
             </span>
@@ -74,20 +72,20 @@ const FooterPage = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-75% p-2 text-black bg-yellow-100 rounded-l-2xl"
+              className="flex-1 p-2 text-black bg-yellow-100 rounded-l-2xl"
               />
               <button className="bg-black px-4 text-white rounded-r-2xl">
-                →
+                send 
               </button>
             </div>
           </div>
 
         </div>
 
-        <hr className='mx-[30px] mt-6 border-[#475467]' />
+        <hr className='mx-4 sm:mx-[30px] mt-6 border-[#475467]' />
 
         {/* Bottom */}
-        <div className='mt-6 mx-[30px] mb-3 flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left'>
+        <div className='mt-6 mx-4 sm:mx-[30px] pb-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left'>
           <span className='text-white text-sm'>
             Copyright© 2023 Fawziuiux. All Rights Reserved.
           </span>
