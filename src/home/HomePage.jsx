@@ -7,10 +7,9 @@ import ProjectIdea from '../component/project-idea/ProjectIdea'
 const HomePage = () => {
   return (
     <>
-    <Navbar/>
+    
     <MyWorkExperince/>
     <ProjectIdea/>
-    <FooterPage/>
     </>
   )
 }
